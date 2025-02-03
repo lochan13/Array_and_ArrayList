@@ -27,7 +27,10 @@ public class NeighbourElement {
         System.out.print("Enter the number of elements: ");
         int n = scanner.nextInt();
 
-        
+        if (n < 2) {
+            System.out.println("Array must have at least two elements.");
+            return;
+        }
 
         int[] arr = new int[n];
         System.out.println("Enter " + n + " integers:");
