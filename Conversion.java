@@ -21,6 +21,11 @@ public class Conversion {
         ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(array));
         System.out.println("Converted to ArrayList: " + arrayList);
 
-        
+        // Convert ArrayList back to array
+        String[] newArray = new String[arrayList.size()];
+        arrayList.toArray(newArray);
+        System.out.println("Converted back to Array: " + Arrays.toString(newArray));
+
+        scanner.close();
     }
 }
