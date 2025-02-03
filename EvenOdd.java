@@ -27,6 +27,6 @@ public class EvenOdd {
     }
 
     System.out.println("Even numbers: " + even);
-    System.out.println("Odd numbers: " + odd);
+    System.out.println("Odd numbers: " + odd); 
   }
 }
