@@ -9,21 +9,25 @@ public class Conversion {
         // Take array input from the user
         System.out.print("Enter the number of elements: ");
         int n = scanner.nextInt();
-        scanner.nextLine(); // Consume newline
 
-        String[] array = new String[n];
+        int[] array = new int[n];
         System.out.println("Enter " + n + " elements:");
         for (int i = 0; i < n; i++) {
-            array[i] = scanner.nextLine();
+            array[i] = scanner.nextInt();
         }
 
-        // Convert array to ArrayList
-        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(array));
+        // Convert primitive int array to ArrayList<Integer>
+        ArrayList<Integer> arrayList = new ArrayList<>();
+        for (int num : array) {
+            arrayList.add(num); // Manually add each element
+        }
         System.out.println("Converted to ArrayList: " + arrayList);
 
-        // Convert ArrayList back to array
-        String[] newArray = new String[arrayList.size()];
-        arrayList.toArray(newArray);
+        // Convert ArrayList<Integer> back to int array
+        int[] newArray = new int[arrayList.size()];
+        for (int i = 0; i < arrayList.size(); i++) {
+            newArray[i] = arrayList.get(i);
+        }
         System.out.println("Converted back to Array: " + Arrays.toString(newArray));
 
         scanner.close();
