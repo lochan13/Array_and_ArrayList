@@ -17,6 +17,10 @@ public class Conversion {
             array[i] = scanner.nextLine();
         }
 
+        // Convert array to ArrayList
+        ArrayList<String> arrayList = new ArrayList<>(Arrays.asList(array));
+        System.out.println("Converted to ArrayList: " + arrayList);
+
         
     }
 }
